@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>brachkow.heic-to-jpeg</string>
+	<key>category</key>
+	<string>Universal Actions</string>
+	<key>connections</key>
+	<dict>
+		<key>1A682901-9BA6-4A0E-AB7A-F80F8595CAF8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1503335D-7FB9-4EB4-B36A-FF90FFA2D82C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Timur Brachkow</string>
+	<key>description</key>
+	<string>Convert HEIC to JPEG</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>HEIC to JPEG</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>export PATH=/opt/homebrew/bin
+
+query=$1
+
+for FILE in "$@"; do
+	convert "$FILE" "${FILE%%.*}.jpg"
+done</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1503335D-7FB9-4EB4-B36A-FF90FFA2D82C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>public.heic</string>
+				</array>
+				<key>name</key>
+				<string>HEIC to JPEG</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>1A682901-9BA6-4A0E-AB7A-F80F8595CAF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1503335D-7FB9-4EB4-B36A-FF90FFA2D82C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>295</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
+		<key>1A682901-9BA6-4A0E-AB7A-F80F8595CAF8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>85</integer>
+			<key>ypos</key>
+			<integer>125</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/brachkow/alfred-heic-to-jpeg</string>
+</dict>
+</plist>
